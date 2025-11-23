@@ -1,0 +1,29 @@
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "omni-zero"
+version = "0.1.0"
+description = "Omni-Zero V4.0 Adaptive: a variable-compute, council-based Transformer architecture in JAX/Flax."
+authors = [{ name = "Lucky", email = "example@example.com" }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+  "jax>=0.4.28",
+  "flax>=0.8.0",
+  "optax>=0.2.0",
+  "chex>=0.1.86",
+  "absl-py>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=7.0.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
